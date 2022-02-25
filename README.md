@@ -2,11 +2,14 @@
 
 ## TODO
 
-Documentation de cadrage
+### Documentation de cadrage
+
 - [ ] Scope
 - [ ] Securite
 - [ ] ANSSI
-Architecture du projet
+
+### Architecture du projet
+
 - [ ] Topologie logique
 - [ ] Topologie physique
 - [ ] ICD
