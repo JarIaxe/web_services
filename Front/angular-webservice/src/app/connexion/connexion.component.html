@@ -1,0 +1,16 @@
+<div class="connexionForm">
+    <form (ngSubmit)="onSubmit()">
+        <!--UserName input-->
+        <label for="inputUserName" >Saisir votre identifiant : </label>
+        <input id="inputUserName" type="text" [(ngModel)]="Userid" name="first">
+        <br>
+        <!--Password input-->
+        <label for="inputPassword">Saisir votre mot de passe : </label>
+        <input id="inputPassword" type="password">
+        <br>
+        <br>
+        <!--Valide form input-->
+        <button class="button" type="submit" routerLink="/users">Connexion</button>
+  
+    </form>
+  </div>

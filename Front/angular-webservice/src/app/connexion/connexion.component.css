@@ -1,0 +1,19 @@
+.connexionForm {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: #1fadb9;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.connexionForm form {
+    position: relative;
+    display: table;
+    margin: auto;
+    text-align: right;
+    vertical-align: middle;
+    top: 45%;
+}
