@@ -15,10 +15,11 @@
             </div>
 
             <!-- Login Form -->
-            <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+            <form (ngSubmit)="onSubmit()">
+                <!--UserName input-->
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="Userid" name="first">
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Log In" routerLink="/users">
             </form>
 
         </div>
