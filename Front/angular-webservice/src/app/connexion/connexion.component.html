@@ -1,16 +1,26 @@
-<div class="connexionForm">
-    <form (ngSubmit)="onSubmit()">
-        <!--UserName input-->
-        <label for="inputUserName" >Saisir votre identifiant : </label>
-        <input id="inputUserName" type="text" [(ngModel)]="Userid" name="first">
-        <br>
-        <!--Password input-->
-        <label for="inputPassword">Saisir votre mot de passe : </label>
-        <input id="inputPassword" type="password">
-        <br>
-        <br>
-        <!--Valide form input-->
-        <button class="button" type="submit" routerLink="/users">Connexion</button>
-  
-    </form>
-  </div>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="vertical-center">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <a href="https://undraw.co/">
+                <img src="../../assets/Images/undraw_Access_account_re_8spm.png" alt="undraw-Access-account-re-8spm" border="0"></a>
+            </div>
+
+            <!-- Login Form -->
+            <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+
+        </div>
+    </div>
+</div>
