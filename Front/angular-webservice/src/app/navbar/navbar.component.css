@@ -1,0 +1,26 @@
+.container-fluid {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'bahnschrift', sans-serif;
+}
+
+.container-fluid a.active{
+    color: #4255F5;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    color: #4255F5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.log-out img {
+    width: 60px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
