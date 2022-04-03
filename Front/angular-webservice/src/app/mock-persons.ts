@@ -7,6 +7,7 @@ export const Persons: Student[] = [
         nom : "Bossard", 
         prenom: "Louis-Marie", 
         age: 22, 
+        mail: "lmbossard@groupe-isia.com",
         list_cours: [
             {
                 nom_cours: "Test"
@@ -24,6 +25,7 @@ export const Persons: Student[] = [
         nom : "Santigny", 
         prenom: "Maurine", 
         age: 25, 
+        mail: 'msantigny@groupe-isia.com',
         list_cours: []
     },
     { 
@@ -31,6 +33,7 @@ export const Persons: Student[] = [
         nom : "Ferragut", 
         prenom: "Lucas", 
         age: 24, 
+        mail: "lferragut@groupe-isia.com",
         list_cours: []
     },
 ]

@@ -1,9 +1,9 @@
-package com.example.OGMA.Repository;
+// package com.example.OGMA.Repository;
 
-import com.example.OGMA.Types.Inscription;
+// import com.example.OGMA.Types.Inscription;
 
-import org.springframework.data.repository.CrudRepository;
+// import org.springframework.data.repository.CrudRepository;
 
-public interface InscriptionRepository extends CrudRepository<Inscription, Long>{
+// public interface InscriptionRepository extends CrudRepository<Inscription, Long>{
     
-}
+// }

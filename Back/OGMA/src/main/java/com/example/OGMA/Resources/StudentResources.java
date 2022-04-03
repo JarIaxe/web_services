@@ -12,7 +12,9 @@ import com.example.OGMA.Repository.StudentRepository;
 import com.example.OGMA.Types.Student;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins = "losalhost:4200", maxAge = 3600)
 @Path("student")
 public class StudentResources{
 
@@ -33,11 +35,16 @@ public class StudentResources{
     }
 
     @GET
-    public void getStudentList() {
+    @Produces(MediaType.APPLICATION_JSON)
+    public Iterable<Student> getStudentList() {
+        String content = "[\n\t";
         Iterable<Student> vartemp = studentRepository.findAll();
         for (Student student : vartemp) {
-            System.out.println(student.toString());
+            content += "{\n\t\tid: " +student.getId()+ ",\n\t\tnom : " +student.getNom()+ ",\n\t\tprenom : " +student.getPrenom()+ ",\n\t\tcursus : " +student.getCursus()+ ",\n\t\tmail: " + student.getMail() + "\n\t},";
         }
+        content += "\n]";
+        System.out.println(content);
+        return vartemp;
     }
 
     @POST

@@ -1,0 +1,14 @@
+<div *ngIf="stud">
+    <h2>{{stud.nom + " " + stud.prenom}}</h2>
+    <form>
+        <label for="">Saisie nom : </label>
+        <input id="saisieNom" class="" type="text" value="{{stud.nom}}" placeholder="Nom de famille"><br>
+        <label for="">Saisie prénom : </label>
+        <input id="saisieNom" class="" type="text" value="{{stud.prenom}}" placeholder="Prénom"><br>
+        <label for="">Saisie age : </label>
+        <input id="saisieNom" class="" type="text" value="{{stud.age}}" placeholder="Age"><br>
+        <label for="">Saisie mail : </label>
+        <input id="saisieNom" class="" type="text" value="{{stud.mail}}" placeholder="Adresse mail"><br>
+        <input type="submit">
+    </form>
+</div>
