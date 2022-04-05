@@ -9,7 +9,7 @@ import { StudentService } from '../student.service';
   styleUrls: ['./list-user.component.css']
 })
 export class ListUserComponent implements OnInit {
-  persons!: Student[];
+  persons = Persons;
   constructor(
     private studentService: StudentService
   ) { }

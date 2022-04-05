@@ -11,6 +11,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
+import { ListTeacherComponent } from './list-teacher/list-teacher.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ModifyUserComponent } from './modify-user/modify-user.component';
     ListUserComponent,
     ConnexionComponent,
     NavbarComponent,
-    ModifyUserComponent
+    ModifyUserComponent,
+    ListTeacherComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<table style="margin-left: 20px;">
+    <thead>
+        <th class="col-sm-2" hidden="true">ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Age</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of teachers">
+            <td hidden="true">{{person.id}}</td>
+            <td>{{person.nom}}</td>
+            <td>{{person.prenom}}</td>
+            <td>{{person.age}}</td>
+            <td>
+                <a href="./users/modify"><img style="height: 30px;" src="../../assets/Images/kisspng-computer-icons-editing-pencil-icon-5ae26c015e2166.6839283515247882253856.jpg" title="Editer"></a>
+                <a href="#"><img src="../../assets/Images/icons8-supprimer-30.png" title="Supprimer"></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
