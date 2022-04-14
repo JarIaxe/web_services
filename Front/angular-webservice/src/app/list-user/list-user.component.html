@@ -13,24 +13,23 @@
     </thead>
 
     <tbody>
-            <tr *ngFor="let person of persons">
-                <td hidden="true">{{person.id}}</td>
-                <td>{{person.nom}}</td>
-                <td>{{person.prenom}}</td>
-                <td>{{person.age}}</td>
-                <td>
-                    <ul>
-                        <li *ngFor="let cours of person.list_cours" style="list-style: none;">{{cours.nom_cours}}</li>
-                    </ul>
-                </td>
-                <td>
-                    <div class="mx-auto" style="width: 60px;">
-                        <a class="action-picture" [href]="'./users/modify/'+person.id"><img src="../../assets/Images/edit.png" title="Editer"></a>
-                        <a class="action-picture" (click)="deleteUser(person.id)"><img src="../../assets/Images/delete.png" title="Supprimer"></a>
-                    </div>
-
-                </td>
-            </tr>
+        <tr *ngFor="let person of persons">
+            <td hidden="true">{{person.id}}</td>
+            <td>{{person.nom}}</td>
+            <td>{{person.prenom}}</td>
+            <td>{{person.age}}</td>
+            <td>
+                <ul>
+                    <li *ngFor="let cours of person.list_cours" style="list-style: none;">{{cours.nom_cours}}</li>
+                </ul>
+            </td>
+            <td>
+                <div class="mx-auto" style="width: 60px;">
+                    <a class="action-picture" [href]="'./users/modify/'+person.id"><img src="../../assets/Images/edit.png" title="Editer"></a>
+                    <a class="action-picture" (click)="deleteUser(person.id)"><img src="../../assets/Images/delete.png" title="Supprimer"></a>
+                </div>
+            </td>
+        </tr>
     </tbody>
 </table>
 <router-outlet></router-outlet>

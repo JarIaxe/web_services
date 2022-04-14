@@ -1,0 +1,14 @@
+#gradeTable {
+    width: 75%;
+    margin: 0 auto;
+}
+
+th.name-col, th.grade-col {
+    cursor: pointer;
+}
+
+.action-picture img {
+    width: 30px;
+    height: 30px;
+}
+ 
