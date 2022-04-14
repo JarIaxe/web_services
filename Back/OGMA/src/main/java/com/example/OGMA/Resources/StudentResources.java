@@ -50,11 +50,14 @@ public class StudentResources{
 
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
-    public void deleteStudent(@QueryParam("idStudent") Long idStudent){
+    @Produces(MediaType.APPLICATION_JSON)
+    public String deleteStudent(@QueryParam("idStudent") Long idStudent){
         try {
             studentRepository.deleteById(idStudent);
+            return "Suppression effectuée";
         } catch (Exception e) {
             //TODO: handle exception
+            return "Suppression interrompu";
         }
     }
     
