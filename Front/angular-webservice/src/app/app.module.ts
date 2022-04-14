@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
 import { ListTeacherComponent } from './list-teacher/list-teacher.component';
+import { AddNoteComponent } from './add-note/add-note.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListTeacherComponent } from './list-teacher/list-teacher.component';
     ConnexionComponent,
     NavbarComponent,
     ModifyUserComponent,
-    ListTeacherComponent
+    ListTeacherComponent,
+    AddNoteComponent
   ],
   imports: [
     BrowserModule,

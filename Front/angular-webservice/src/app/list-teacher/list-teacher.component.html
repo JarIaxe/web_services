@@ -14,7 +14,7 @@
             <td>{{person.prenom}}</td>
             <td>{{person.age}}</td>
             <td>
-                <a href="./users/modify"><img style="height: 30px;" src="../../assets/Images/kisspng-computer-icons-editing-pencil-icon-5ae26c015e2166.6839283515247882253856.jpg" title="Editer"></a>
+                <a [href]="'users/modify/' + person.id"><img style="height: 30px;" src="../../assets/Images/kisspng-computer-icons-editing-pencil-icon-5ae26c015e2166.6839283515247882253856.jpg" title="Editer"></a>
                 <a href="#"><img src="../../assets/Images/icons8-supprimer-30.png" title="Supprimer"></a>
             </td>
         </tr>

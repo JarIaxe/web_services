@@ -1,6 +1,7 @@
 package com.example.OGMA.Resources;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -14,7 +15,7 @@ import com.example.OGMA.Types.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@CrossOrigin(origins = "losalhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "localhost:4200", maxAge = 3600)
 @Path("student")
 public class StudentResources{
 
@@ -47,7 +48,7 @@ public class StudentResources{
         return vartemp;
     }
 
-    @POST
+    @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     public void deleteStudent(@QueryParam("idStudent") Long idStudent){
         try {

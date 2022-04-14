@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Student } from './student';
@@ -15,5 +15,11 @@ export class StudentService {
 
   getStudents(): Observable<Student[]> {
     return this.http.get<Student[]>(this.url)
+  }
+
+  deleteUser(id: number): Observable<Object>{
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("id",1); //VERY IMPORTANT
+    return this.http.delete(this.url,{params: queryParams});
   }
 }
