@@ -7,7 +7,7 @@ import { Student } from './student';
   providedIn: 'root'
 })
 export class StudentService {
-  private url: string = "localhost:8080/rest/student"
+  private url: string = "192.168.151.196:8080/rest/student"
 
   constructor(
     private http: HttpClient
