@@ -15,13 +15,13 @@ import com.example.OGMA.Types.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@CrossOrigin(origins = "localhost:4200", maxAge = 3600)
 @Path("student")
 public class StudentResources{
 
     @Autowired
     private StudentRepository studentRepository;
 
+    @CrossOrigin
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -35,6 +35,7 @@ public class StudentResources{
         return s;
     }
 
+    @CrossOrigin
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Iterable<Student> getStudentList() {
@@ -48,6 +49,7 @@ public class StudentResources{
         return vartemp;
     }
 
+    @CrossOrigin
     @DELETE
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
