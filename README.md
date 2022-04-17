@@ -11,8 +11,19 @@
 ### Architecture du projet
 
 - [x] Topologie logique
-- [ ] Topologie physique
-- [ ] ICD
+- [x] Synoptique
+- [x] ICD
+
+### Dev
+
+- [x] Design base de données
+- [x] Configuration service Angular
+- [x] Boostrap
+- [x] Connexion API <-> DB
+- [x] Easter eggs
+- [x] Documentation générale
+- [x] Documentation technique
+- [x] Intégration images
 
 ### Repo documentaire
 
