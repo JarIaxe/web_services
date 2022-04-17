@@ -1,4 +1,7 @@
 <app-navbar ></app-navbar>
+<div  style="width: 75%;position: relative; left: 12.5%">
+    <button routerLink="./new">Nouvel étudiant</button>
+</div>
 
 <table class="table table-bordered table-striped" id="gradeTable">
     <thead class="thead-dark">
@@ -6,8 +9,9 @@
             <th class="col-sm-2" hidden="true">ID</th>
             <th scope="col" data-field="Nom">Nom</th>
             <th scope="col" data-field="Prenom">Prénom</th>
-            <th scope="col" data-field="Nom">Age</th>
-            <th scope="col" data-field="Nom">Cours</th>
+            <th scope="col" data-field="Prenom">Cursus</th>
+            <th scope="col" data-field="Prenom">Site</th>
+            <th scope="col" data-field="Nom">Mail</th>
             <th scope="col" data-field="Nom">Actions</th>
         </tr>
     </thead>
@@ -17,12 +21,9 @@
             <td hidden="true">{{person.id}}</td>
             <td>{{person.nom}}</td>
             <td>{{person.prenom}}</td>
-            <td>{{person.age}}</td>
-            <td>
-                <ul>
-                    <li *ngFor="let cours of person.list_cours" style="list-style: none;">{{cours.nom_cours}}</li>
-                </ul>
-            </td>
+            <td>{{person.cursus}}</td>
+            <td>{{person.site}}</td>
+            <td>{{person.mail}}</td>
             <td>
                 <div class="mx-auto" style="width: 60px;">
                     <a class="action-picture" [href]="'./users/modify/'+person.id"><img src="../../assets/Images/edit.png" title="Editer"></a>

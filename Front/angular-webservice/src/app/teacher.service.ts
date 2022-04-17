@@ -1,67 +1,58 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { Student } from './student';
+import { Teacher } from './teacher';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentService {
-  private url: string = "http://localhost:8080/rest/students"
+export class TeacherService {
+  private url: string = "http://localhost:8080/rest/teachers"
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getStudents(): Observable<Student[]> {
+  getTeachers(): Observable<Teacher[]> {
     let queryHeader = new HttpHeaders();
     queryHeader = queryHeader.append("Access-Control-Allow-Origin","*");
     queryHeader = queryHeader.append('Access-Control-Allow-Headers','Content-Type');
     queryHeader = queryHeader.append('Access-Control-Allow-Methods','GET,POST,OPTIONS,DELETE,PUT');
-    return this.http.get<Student[]>(this.url+"/list",{headers: queryHeader});
+    return this.http.get<Teacher[]>(this.url+"/list",{headers: queryHeader});
   }
 
-  deleteUser(id: number): Observable<Object>{
+  deleteTeacher(id: number): Observable<Object>{
     let queryHeader = new HttpHeaders();
     queryHeader = queryHeader.append("Access-Control-Allow-Origin","*");
     queryHeader = queryHeader.append('Access-Control-Allow-Headers','Content-Type');
     queryHeader = queryHeader.append('Access-Control-Allow-Methods','GET,POST,OPTIONS,DELETE,PUT');
 
     let queryParams = new HttpParams();
-    queryParams = queryParams.append("idStudent",id); //VERY IMPORTANT
+    queryParams = queryParams.append("id",id); //VERY IMPORTANT
     return this.http.delete(this.url,{headers: queryHeader ,params: queryParams});
   }
 
-  getStudent(id:number): Observable<Student>{
+  getTeacher(id:number): Observable<Teacher>{
     let queryHeader = new HttpHeaders();
     queryHeader = queryHeader.append("Access-Control-Allow-Origin","*");
     queryHeader = queryHeader.append('Access-Control-Allow-Headers','Content-Type');
     queryHeader = queryHeader.append('Access-Control-Allow-Methods','GET,POST,OPTIONS,DELETE,PUT');
 
-    let queryParams = new HttpParams();
-    return this.http.get<Student>(this.url+ "/"+id, {headers: queryHeader});
+    return this.http.get<Teacher>(this.url+ "/"+id, {headers: queryHeader});
   }
 
-  updateStudent(stud: Student): Observable<object>{
-    console.log(stud)
+  updateTeacher(teacher: Teacher): Observable<object>{
+    console.log(teacher)
     let queryHeader = new HttpHeaders();
     queryHeader = queryHeader.append("Access-Control-Allow-Origin","*");
     queryHeader = queryHeader.append('Access-Control-Allow-Headers','Content-Type');
     queryHeader = queryHeader.append('Access-Control-Allow-Methods','GET,POST,OPTIONS,DELETE,PUT');
 
-    
-    let queryParams = new HttpParams();
-    queryParams = queryParams.append("id",stud.id);
-    queryParams = queryParams.append("nom",stud.nom);
-    queryParams = queryParams.append("prenom",stud.prenom);
-    queryParams = queryParams.append("cursus",stud.cursus.toString());
-    queryParams = queryParams.append("site",stud.site.toString());
-    queryParams = queryParams.append("mail",stud.mail);
     console.log("envoie de la requete")
-    return this.http.post(this.url+"/update", stud);
+    return this.http.post(this.url+"/update", teacher);
   }
 
-  newStudent(nom:string, prenom: string, cursus: string, site: string, mail:string): void {
+  newTeacher(nom:string, prenom:string, site:string, mail:string): Observable<Teacher>{
     let queryHeader = new HttpHeaders();
     queryHeader = queryHeader.append("Access-Control-Allow-Origin","*");
     queryHeader = queryHeader.append('Access-Control-Allow-Headers','Content-Type');
@@ -71,9 +62,9 @@ export class StudentService {
     let queryParams = new HttpParams();
     queryParams = queryParams.append("nom",nom);
     queryParams = queryParams.append("prenom",prenom);
-    queryParams = queryParams.append("cursus",cursus.toString());
-    queryParams = queryParams.append("site",site.toString());
+    queryParams = queryParams.append("site",site);
     queryParams = queryParams.append("mail",mail);
-    this.http.post(this.url, {params: queryParams})
+    console.log("new teacher")
+    return this.http.post<Teacher>("http://localhost:8080/rest/teachers/new", {hearders: queryHeader,params: queryParams})
   }
 }

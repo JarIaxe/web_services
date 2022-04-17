@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div *ngIf="teacher" style="width: 75%;position: relative; left: 12.5%" >
+    <form  method="post" >
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <th hidden="true"></th>
+                <th>Saisie nom</th>
+                <th>Saisie prénom</th>
+                <th>Saisie site</th>
+                <th>Saisie mail</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td hidden="true">
+                        <input class="" type="id" value="{{teacher.id}}" placeholder="" hidden="true"><br>
+                    </td>
+                    <td>
+                        <input id="saisieNom" class="" type="text" [(ngModel)]="teacher.nom" value="{{teacher.nom}}" name="nomFamille" placeholder="Nom de famille"><br>
+                    </td>
+                    <td>
+                        <input id="saisiePrenom" class="" type="text" [(ngModel)]="teacher.prenom" value="{{teacher.prenom}}" name="prenom" placeholder="Prénom"><br>
+                    </td>
+                    <td>
+                        <input id="saisieSite" class="" type="text" [(ngModel)]="teacher.site" value="{{teacher.site}}" name="site" placeholder="Site"><br>
+                    </td>
+                    <td>
+                        <input id="saisieMail" class="" type="text" [(ngModel)]="teacher.mail" value="{{teacher.mail}}" name="mail" placeholder="Adresse mail"><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <button type="submit" (click)="updateTeacher(teacher)">Envoyer</button>
+    <button routerLink="../../">Retour</button>
+</div>

@@ -10,6 +10,7 @@ public class OgmaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OgmaApplication.class, args);
 		System.out.println("started");
+		
 	}
 
 }

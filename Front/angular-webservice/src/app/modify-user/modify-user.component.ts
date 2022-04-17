@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Student } from '../student';
-import { Persons } from '../mock-persons';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-modify-user',
@@ -9,23 +9,23 @@ import { Persons } from '../mock-persons';
   styleUrls: ['./modify-user.component.css']
 })
 export class ModifyUserComponent implements OnInit {
-  static persons = Persons;
   stud!: Student;
   constructor(
     private route : ActivatedRoute,
+    private studentService : StudentService,
   ) { }
 
   ngOnInit(): void {
-    this.getPerson();
+    this.getStudent();
     console.log(this.stud);
   }
 
-  getPerson(): void {
+  getStudent(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    ModifyUserComponent.persons.forEach(student => {
-      if (student.id == id) {
-        this.stud = student
-      }
-    });
+    this.studentService.getStudent(id).subscribe(student => {this.stud = student, console.log(this.stud) })
+  }
+
+  updateStudent(stud: Student): void{
+    this.studentService.updateStudent(stud).subscribe(e => console.log("post requete"));
   }
 }

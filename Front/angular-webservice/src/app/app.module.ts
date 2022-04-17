@@ -12,7 +12,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
 import { ListTeacherComponent } from './list-teacher/list-teacher.component';
-import { AddNoteComponent } from './add-note/add-note.component';
+import { ModifyTeacherComponent } from './modify-teacher/modify-teacher.component';
+import { NewStudentComponent } from './new-student/new-student.component';
+import { NewTeacherComponent } from './new-teacher/new-teacher.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AddNoteComponent } from './add-note/add-note.component';
     NavbarComponent,
     ModifyUserComponent,
     ListTeacherComponent,
-    AddNoteComponent
+    ModifyTeacherComponent,
+    NewStudentComponent,
+    NewTeacherComponent
   ],
   imports: [
     BrowserModule,

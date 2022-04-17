@@ -1,12 +1,15 @@
 <app-navbar></app-navbar>
-
+<div  style="width: 75%;position: relative; left: 12.5%">
+    <button routerLink="./new">Nouvel enseignant</button>
+</div>
 <table class="table table-bordered table-striped" id="gradeTable">
     <thead class="thead-dark">
         <tr>
             <th class="col-sm-2" hidden="true">ID</th>
             <th scope="col" data-field="Nom">Nom</th>
             <th scope="col" data-field="Prenom">Prénom</th>
-            <th scope="col" data-field="Nom">Age</th>
+            <th scope="col" data-field="Site">Site</th>
+            <th scope="col" data-field="Mail">Mail</th>
             <th scope="col" data-field="Nom">Actions</th>
         </tr>
     </thead>
@@ -16,11 +19,12 @@
             <td hidden="true">{{person.id}}</td>
             <td>{{person.nom}}</td>
             <td>{{person.prenom}}</td>
-            <td>{{person.age}}</td>
+            <td>{{person.site}}</td>
+            <td>{{person.mail}}</td>
             <td>
                 <div class="mx-auto" style="width: 60px;">
-                    <a class="action-picture" [href]="'users/modify/' + person.id"><img src="../../assets/Images/edit.png" title="Editer"></a>
-                    <a class="action-picture" href="#"><img src="../../assets/Images/delete.png" title="Supprimer"></a>
+                    <a class="action-picture" [href]="'teachers/modify/' + person.id"><img src="../../assets/Images/edit.png" title="Editer"></a>
+                    <a class="action-picture" (click)="deleteUser(person.id)"><img src="../../assets/Images/delete.png" title="Supprimer"></a>
                 </div>
             </td>
         </tr>

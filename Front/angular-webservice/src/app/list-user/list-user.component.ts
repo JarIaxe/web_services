@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Persons } from '../mock-persons';
 import { Student } from '../student';
 import { StudentService } from '../student.service';
 import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-user',
@@ -10,21 +10,22 @@ import { Location } from '@angular/common';
   styleUrls: ['./list-user.component.css']
 })
 export class ListUserComponent implements OnInit {
-  //persons = Persons;
   persons!: Student[];
   constructor(
+    private route : ActivatedRoute,
     private studentService: StudentService,
-    private location: Location
   ) { }
 
   ngOnInit(): void {
-    this.studentService.getStudents().subscribe(students => this.persons = students)
+    this.studentService.getStudents().subscribe(students => {this.persons = students, console.log(this.persons)})
   }
 
   deleteUser(id:number): void{
     console.log(id)
-    window.location.reload
-    //this.studentService.deleteUser(id);
+    this.studentService.deleteUser(id).subscribe(text => {
+      console.log(text); 
+    });
+    
   }
 
 }

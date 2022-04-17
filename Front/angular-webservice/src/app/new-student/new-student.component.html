@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div style="width: 75%;position: relative; left: 12.5%">
+    <form method="post" >
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <th hidden="true"></th>
+                <th>Saisie nom</th>
+                <th>Saisie prénom</th>
+                <th>Saisie cursus</th>
+                <th>Saisie site</th>
+                <th>Saisie mail</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td hidden="true">
+                        <input class="" type="id" placeholder="" hidden="true"><br>
+                    </td>
+                    <td>
+                        <input id="saisieNom" class="" type="text" name="nomFamille" placeholder="Nom de famille" #nomFamille><br>
+                    </td>
+                    <td>
+                        <input id="saisiePrenom" class="" type="text" name="prenom" placeholder="Prénom" #prenom><br>
+                    </td>
+                    <td>
+                        <input id="saisieCursus" class="" type="text" name="cursus" placeholder="cursus" #cursus><br>
+                    </td>
+                    <td>
+                        <input id="saisieSite" class="" type="text" name="site" placeholder="Site" #site><br>
+                    </td>
+                    <td>
+                        <input id="saisieMail" class="" type="text" name="mail" placeholder="Adresse mail" #mail><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <button type="submit" (click)="newStudent(nomFamille.value, prenom.value, cursus.value, site.value, mail.value)">Envoyer</button>
+    <button routerLink="../">Retour</button>
+</div>
