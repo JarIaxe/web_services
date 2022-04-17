@@ -24,7 +24,10 @@
 - [x] Documentation générale
 - [x] Documentation technique
 - [x] Intégration images
+- [x] Ajout des comptes utilisateurs
+- [x] Graylog
+- [x] Tests
 
-### Repo documentaire
+### Repo documentaire & OVA Graylog
 
 - https://etuimtlilledouaifr-my.sharepoint.com/:f:/g/personal/quentin_du_bois_etu_imt-lille-douai_fr/Elv078OYtDdAv7A64xaF__EBOJv3xWPfnl6CR7rmQbYIaA?e=43BiGW
